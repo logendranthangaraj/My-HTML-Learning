@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        .header-container{
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .header-words {
+            text-align: left;
+            background-color: black;
+            border-bottom: 2px solid white;
+            padding: 20px 30px;
+        }
+
+        .name{
+            font-size: 30px;
+            color: rgb(96, 219, 236);
+        }
+
+        .title{
+            font-size: 20px;
+            color: rgb(96, 219, 236);
+        }
+
+        .terminal-nav {
+            padding: 15px 30px;
+            background: rgba(0, 0, 0, 0.9);
+            border-bottom: 1px solid #ffffff;
+            font-size: 0.9rem;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .nav-link {
+            color: #cad4cd;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            padding: 3px 5px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .nav-link:hover {
+            background: rgb(96, 219, 236);
+            color: #000;
+        }
+
+        .nav-separator {
+            margin: 0 50px;
+            color: #ffffff;
+        }
+
+        .hero-section{
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .grid{
+            display: flex;
+            /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .card-container{
+
+            perspective: 1000px;
+            height: 350px;
+            width: 250px;
+        }
+
+        .card{
+            width: 100%;
+            height: 100%;
+            border: 2px solid skyblue;
+            border-radius: 10px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.8s;
+            cursor: pointer;
+        }
+
+        .card-container:hover .card{
+            transform: rotateY(180deg);
+        }
+
+        .card-front, .card-back{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .card-front{
+            background: transparent;
+            color: none;
+        }
+
+        .card-back{
+            background: transparent;
+            transform: rotateY(180deg);
+        }
+
+        .student-initials {
+            width: 100px;
+            height: 100px;
+            color: white;
+            background: transparent;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            border: 3px solid skyblue;
+        }
+
+        .student-name {
+            color:white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .student-id {
+            color: rgb(255, 255, 255);
+            font-size: 1rem;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+
+        .student-department {
+            background: skyblue;
+            font-size: 1rem;
+            font-weight: bold;
+            padding: 6px 15px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            border: 1px solid black;
+            margin-bottom: 15px;
+        }
+
+        .hint {
+            color: grey;
+            font-size: 0.8rem;
+            opacity: 0.8;
+            margin-top: 10px;
+        }
+
+        .card-back-content {
+            width: 100%;
+        }
+
+        .black-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: skyblue;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid white;
+        }
+
+        .info-row:last-child {
+            border-bottom: none;
+        }
+
+        .info-label {
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .info-value {
+            color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <header class="header-words">
+            <h1 class="name">ATOZ College</h1>
+            <p class="title">World best college | 100% placement | A++ Grade</p>       
+        </header>
+        <nav class="terminal-nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <span class="nav-separator">|</span>
+            <a href="about.html" class="nav-link">About</a>
+            <span class="nav-separator">|</span>
+            <a href="courses.html" class="nav-link">Courses</a>
+            <span class="nav-separator">|</span>
+            <a href="admissions.html" class="nav-link">Admissions</a>
+            <span class="nav-separator">|</span>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <span class="nav-separator">|</span>
+            <a href="student.html" class="nav-link">Student Portal</a>
+        </nav>
+
+        <div class="hero-section">
+            <div class="grid">
+                <!-- card 1 -->
+                <div class="card-container">
+                    <div class="card">
+                        <div class="card-front">
+                            <div class="student-initials">L</div>
+                            <div class="student-name">Logendran</div>
+                            <div class="student-id">22ECR079</div>
+                            <div class="student-department">ECE</div>
+                            <div class="hint">Hover to flip</div>
+                        </div>
+                        <div class="card-back">
+                            <div class="card-back-content">
+                                <div class="black-title">Student Details</div>
+                                <div class="info-row">
+                                    <span class="info-label">Year:</span>
+                                    <span class="info-value">4th year</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="info-label">GPA:</span>
+                                    <span class="info-value">8.8 / 10</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="info-label">Email:</span>
+                                    <span class="info-value">logan@gmail.com</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="info-label">Phone:</span>
+                                    <span class="info-value">+123456789</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="info-label">Status:</span>
+                                    <span class="info-value">Placed</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--card 2 -->
+                <div class="card-container">
+                    <div class="card">
+                        <div class="card-front">
+                            <div class="student-initials">S</div>
+                            <div class="student-name">Sanjay V</div>
+                            <div class="student-id">22ECR126</div>
+                            <div class="student-department">ECE</div>
+                            <div class="hint">Hover to flip</div>
+                        </div>
+                        <div class="card-back">
+                            <div class="card-back-content">
+                                <div class="black-title">Student Details</div>
+                                <div class="info-row">
+                                    <span class="info-label">Year:</span>
+                                    <span class="info-value">4th year</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="info-label">GPA:</span>
+                                    <span class="info-value">8.0 / 10</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="info-label">Email:</span>
+                                    <span class="info-value">sanjay@gmail.com</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="info-label">Phone:</span>
+                                    <span class="info-value">+123456789</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="info-label">Status:</span>
+                                    <span class="info-value">Placed</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 3 -->
+                 <div class="card-container">
+                    <div class="card">
+                        <div class="card-front">
+                            <div class="student-initials">A</div>
+                            <div class="student-name">Ashwin M P</div>
+                            <div class="student-id">22ECR007</div>
+                            <div class="student-department">ECE</div>
+                            <div class="hint">Hover to flip</div>
+                        </div>
+                        <div class="card-back">
+                            <div class="card-back-content">
+                                <div class="black-title">Student Details</div>
+                                <div class="info-row">
+                                    <span class="info-label">Year:</span>
+                                    <span class="info-value">4th year</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="info-label">GPA:</span>
+                                    <span class="info-value">8.7 / 10</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="info-label">Email:</span>
+                                    <span class="info-value">mpashwin@gmail.com</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="info-label">Phone:</span>
+                                    <span class="info-value">+123456789</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="info-label">Status:</span>
+                                    <span class="info-value">Placed</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 4 -->
+                <div class="card-container">
+                    <div class="card">
+                        <div class="card-front">
+                            <div class="student-initials">NK</div>
+                            <div class="student-name">Nithishkumar M B</div>
+                            <div class="student-id">22ECR093</div>
+                            <div class="student-department">ECE</div>
+                            <div class="hint">Hover to flip</div>
+                        </div>
+                        <div class="card-back">
+                            <div class="card-back-content">
+                                <div class="black-title">Student Details</div>
+                                <div class="info-row">
+                                    <span class="info-label">Year:</span>
+                                    <span class="info-value">4th year</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="info-label">GPA:</span>
+                                    <span class="info-value">8.7 / 10</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="info-label">Email:</span>
+                                    <span class="info-value">mbboss@gmail.com</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="info-label">Phone:</span>
+                                    <span class="info-value">+123456789</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="info-label">Status:</span>
+                                    <span class="info-value">Placed</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

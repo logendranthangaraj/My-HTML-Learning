@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGENDRAN T - Data Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "8_IBcDmIHwrRXSYmN",
+            });
+        })();
+    </script>
+</head>
+
+<body>
+    <div class="matrix-bg" id="matrixBg"></div>
+
+    <div class="terminal-container">
+        <header class="terminal-header">
+            <h1 class="name">LOGENDRAN T</h1>
+            <p class="title">Data Engineer</p>
+        </header>
+
+        <nav class="terminal-nav">
+            <a class="nav-link" data-command="help">Help</a>
+            <span class="nav-separator">|</span>
+            <a class="nav-link" data-command="about">About</a>
+            <span class="nav-separator">|</span>
+            <a class="nav-link" data-command="projects">Projects</a>
+            <span class="nav-separator">|</span>
+            <a class="nav-link" data-command="skills">Skills</a>
+            <span class="nav-separator">|</span>
+            <a class="nav-link" data-command="experience">Experience</a>
+            <span class="nav-separator">|</span>
+            <a class="nav-link" data-command="education">Education</a>
+            <span class="nav-separator">|</span>
+            <a class="nav-link" data-command="certifications">Certifications</a>
+            <span class="nav-separator">|</span>
+            <a class="nav-link" data-command="leadership">Leadership</a>
+            <span class="nav-separator">|</span>
+            <a class="nav-link" data-command="contact">Contact</a>
+            <span class="nav-separator">|</span>
+            <a class="nav-link" data-command="clear">Clear</a>
+        </nav>
+
+        <main class="terminal-main">
+            <aside class="profile-section">
+                <div class="profile-card">
+                    <div class="-cardfront">
+                        <div class="profile-image">
+                            <img src="photo.jpg" alt="Logendran T" id="profileImg"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="profile-placeholder" style="display: none;">👨‍💻</div>
+                        </div>
+                        <div class="profile-handle">@logendran</div>
+                        <div class="profile-stats">
+                            <div class="stat-item">
+                                <span>Experience:</span>
+                                <span>1+ years</span>
+                            </div>
+                            <div class="stat-item">
+                                <span>Projects:</span>
+                                <span>5+</span>
+                            </div>
+                            <div class="stat-item">
+                                <span>Status:</span>
+                                <span style="color: #00ff41;">Available</span>
+                            </div>
+                            <div class="stat-item">
+                                <span>Location:</span>
+                                <span>Tamil Nadu,India</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="backcard">
+                        <p>Here's my resume for a detailed view of my skills and projects</p>
+                        <a href="LOGENDRAN_T.pdf" class="resume-but" target="_blank">Resume</a>
+                    </div>
+                </div>
+            </aside>
+
+            <section class="terminal-output" id="terminalOutput">
+                <div class="command-block">
+                    <div class="command-line">
+                        <span class="prompt">logendran@portfolio:</span>
+                        <span class="command">welcome</span>
+                    </div>
+                    <div class="output">
+                        <p>Hi, I'm Logendran, a Data Engineer and VLSI Enthusiastic.</p>
+                        <br>
+                        <p>Welcome to my interactive portfolio terminal!</p>
+                        <p>Type 'help' to see available commands or click on the navigation above.</p>
+                    </div>
+                </div>
+
+                <div class="command-input-area">
+                    <div class="command-line">
+                        <span class="prompt">logendran@portfolio:~$</span>
+                        <input type="text" class="command-input" id="commandInput" placeholder="Type a command..."
+                            autocomplete="off" spellcheck="false">
+                        <!-- <span class="cursor">|</span> -->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="status-bar">
+            <div class="status-left">
+                <span class="status-indicator">[Interactive portfolio With help of AI]</span>
+            </div>
+            <div class="status-right">
+                <span class="timestamp" id="timestamp"></span>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
